@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image: 
+  repository: prom/prometheus
+  grafana_image: grafana/grafana:latest
+  tag: latest
+  pullPolicy: Always
+
+container_name: prometheus
+
+namespace_name: devops-ns
+
+labels_name: prometheus-server
+
+ports:
+  grafana_port: 3000
